@@ -13,11 +13,16 @@ function add_nums() {
 }
 
 // alert("Hello World");
+var names = ["Arnold","Izzy","William","Alberto","Kevin","Brian"];
+
 
 function updateName(){
   var name = prompt("Enter your name");
   // alert(name);
-  if( !name ) { name = "Stinky McCheese"; }
+  if( !name ) { 
+    // name = names[2]; 
+    name = names[Math.floor(Math.random()*names.length)];
+  }
   document.getElementById("person").innerText = name;
 }
 
